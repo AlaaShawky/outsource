@@ -1,0 +1,35 @@
+
+<div class="container-fluid">
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{{selectedShop.name}} <span class="text-muted"> - {{selectedShop.category | categoryfilter}}</span></h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="row">
+                <div class="col-xs-6">
+                    {{selectedShop.description}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3"><img style="width: 50%" src="app/view1/images/vintro1.PNG" alt=""/></div>
+                <div class="col-xs-3"><img style="width: 50%" src="app/view1/images/vintro2.PNG" alt=""/></div>
+                <div class="col-xs-3"><img style="width: 50%" src="app/view1/images/vintro3.PNG" alt=""/></div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="row"><span class="label label-info">ADDRESS:</span>{{selectedShop.street}} {{selectedShop.houseNumber}}</div>
+            <div class="row"><span class="label label-info">CITY:</span>{{selectedShop.cityInfo.zipCode}} {{selectedShop.cityInfo.city}}</div>
+            <div class="row"><span class="label label-info">PHONE:</span>{{selectedShop.phone | phoneFilter}}</div>
+            <div class="row"><span class="label label-info">EMAIL:</span>{{selectedShop.email}}</div>
+            <div class="row"><span class="label label-info">OPENING HOURS:</span>{{selectedShop.dayNullOpen | hourFilter}} - {{selectedShop.dayNullClose | hourFilter}}</div>
+            <div class="row"><span class="label label-info">WEBSITE:</span> <a href="{{selectedShop.website | hrefFilter}}">{{selectedShop.website | linkTxtFilter}}</a></div>
+            <div class="row"><span class="label label-info">RATING:</span>{{selectedShop.rating}}</div> <!-- {{selectedGoogleShop.result.rating}}-->
+        </div>
+    </div>
+
+</div>
