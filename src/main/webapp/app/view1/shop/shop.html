@@ -2,8 +2,7 @@
 <style>
     .label-info{
         width: 110px;
-        display: inline-block;
-        margin-right: 10px;
+        display: inline-block;       
     }
     
     img.thumpnail-img{
@@ -91,13 +90,33 @@
             </div>
         </div>
         <div class="col-xs-12 col-md-6 mb10">
-            <div class=""><span class="label label-info">ADDRESS:</span><span class="spanAsBlock">{{selectedShop.street}} {{selectedShop.houseNumber}}</span></div>
-            <div class=""><span class="label label-info">CITY:</span><span class="spanAsBlock">{{selectedShop.cityInfo.zipCode}} {{selectedShop.cityInfo.city}}</span></div>
-            <div class=""><span class="label label-info">PHONE:</span><span class="spanAsBlock">{{selectedShop.phone | phoneFilter}}</span></div>
-            <div class=""><span class="label label-info">EMAIL:</span><span class="spanAsBlock">{{selectedShop.email}}</span></div>
-            <div class=""><span class="label label-info">OPENING HOURS:</span><span class="spanAsBlock">{{selectedShop.dayNullOpen | hourFilter}} - {{selectedShop.dayNullClose | hourFilter}}</span></div>
-            <div class=""><span class="label label-info">WEBSITE:</span> <span class="spanAsBlock"><a href="{{selectedShop.website | hrefFilter}}">{{selectedShop.website | linkTxtFilter}}</a></span></div>
-            <div class=""><span class="label label-info">RATING:</span><span class="spanAsBlock">{{selectedShop.rating}}</span></div> <!-- {{selectedGoogleShop.result.rating}}-->
+            <div class="">
+                <div class="label label-info col-xs-5">ADDRESS:</div>
+                <div class="spanAsBlock col-xs-7">{{selectedShop.street}} {{selectedShop.houseNumber}}</div>
+            </div>
+            <div class="">
+                <div class="label label-info col-xs-5">CITY:</div>
+                <div class="spanAsBlock col-xs-7">{{selectedShop.cityInfo.zipCode}} {{selectedShop.cityInfo.city}}</div>
+            </div>
+            <div class="">
+                <div class="label label-info col-xs-5">PHONE:</div>
+                <div class="spanAsBlock col-xs-7">{{selectedShop.phone | phoneFilter}}</div></div>
+            <div class="">
+                <div class="label label-info col-xs-5">EMAIL:</div>
+                <div class="spanAsBlock col-xs-7">{{selectedShop.email}}</div>
+            </div>
+            <div class="">
+                <div class="label label-info col-xs-5">OPENING HOURS:</div>
+                <div class="spanAsBlock col-xs-7">{{selectedShop.dayNullOpen | hourFilter}} - {{selectedShop.dayNullClose | hourFilter}}</div>
+            </div>
+            <div class="">
+                <div class="label label-info col-xs-5">WEBSITE:</div> 
+                <div class="spanAsBlock col-xs-7"><a href="{{selectedShop.website | hrefFilter}}">{{selectedShop.website | linkTxtFilter}}</a></div>
+            </div>
+            <div class="">
+                <div class="label label-info col-xs-5">RATING:</div>
+                <div class="spanAsBlock col-xs-7">{{selectedShop.rating}}</div>
+            </div> <!-- {{selectedGoogleShop.result.rating}}-->
         </div>
     </div>
 
